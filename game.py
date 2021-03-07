@@ -1,9 +1,7 @@
+from random import randrange
 from os import environ, path
 environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 import pygame
-import random
-
-
 pygame.font.init()  # init font
 
 WIN_WIDTH = 300
@@ -101,7 +99,7 @@ class Pipe:
         self.set_height()
 
     def set_height(self):
-        self.height = random.randrange(25, 225)
+        self.height = randrange(25, 225)
         self.top = self.height - self.PIPE_TOP.get_height()
         self.bottom = self.height + self.GAP
 
